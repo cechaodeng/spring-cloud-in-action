@@ -1,6 +1,6 @@
 package com.didispace.web;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+//import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +21,7 @@ public class HelloService {
     @Autowired
     RestTemplate restTemplate;
 
-    @HystrixCommand(fallbackMethod = "helloFallback", commandKey = "helloKey")
+    //@HystrixCommand(fallbackMethod = "helloFallback", commandKey = "helloKey")
     public String hello() {
         long start = System.currentTimeMillis();
 
